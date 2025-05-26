@@ -6,9 +6,10 @@ select *
 from Mental_health
 ```
 ## Edit Column Names
+```sql
 exec sp_rename
 'Mental_health.[deptype]', 'Dep_type', 'COLUMN'
-
+```
 ## delete columns
 ```sql
 alter table Mental_health
