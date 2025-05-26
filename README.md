@@ -1,4 +1,46 @@
 # Analysis on Students Mental Health in Asian Schools
+## Project Description
+```sql
+inter_dom – Student type: International (Inter) or Domestic.
+Region – Geographical region of origin (e.g., SEA = Southeast Asia, EA = East Asia).
+Gender – Gender identity (e.g., Male, Female).
+Academic – Academic level (e.g., Grad = Graduate).
+Age – Student’s age.
+Age_cate – Categorized age (numerical bin).
+Stay – Duration of stay in the country (in years).
+Stay_Cate – Categorical version of stay duration (e.g., Short, Long).
+Japanese – Japanese language proficiency score.
+Japanese_cate – Categorized Japanese proficiency (e.g., Low, Average, High).
+English – English language proficiency score.
+English_cate – Categorized English proficiency.
+Intimate – Whether the student has an intimate partner.
+Religion – Whether the student is religious.
+Suicide – Whether the student has had suicidal thoughts.
+Dep – Whether the student has experienced depression.
+DepType – Type of depression experienced.
+ToDep – Total number of depressive symptoms.
+DepSev – Severity level of depression.
+ToSC – Total social connection score.
+APD – Depression related to academic performance.
+AHome – Depression related to homesickness.
+APH – Depression related to physical health.
+Afear – Depression related to fear/anxiety.
+ACS – Academic coping score.
+AGuilt – Guilt-related depression.
+AMiscell – Miscellaneous reasons for depression.
+ToAS – Total academic stress.
+Partner_bi – Binary (Yes/No) version of partner support.
+Friends_bi – Binary version of friend support.
+Parents_bi – Binary version of parent support.
+Relative_bi – Binary version of relative support.
+Professional_bi – Binary version of professional support.
+Phone_bi – Binary version of phone support.
+Doctor_bi – Binary version of doctor support.
+religion_bi – Binary version of religion support.
+Alone_bi – Binary version of coping alone.
+Others_bi – Binary version of other support.
+Internet_bi – Binary version of internet support.
+```
 ## Schema
 
 ```sql
