@@ -45,9 +45,12 @@ from Mental_health
 where English_cate is not null
 and Dep = 'yes'
 group by English_cate
--- student with high Eglish proficiency show a great depression tendencies
 ```
 ![](https://github.com/XeNoX36/Students-Mental-Health/blob/main/MH2.png)
+```sql
+-- student with high English proficiency show a great depression tendencies
+```
+
 
 ## 3. What are the most common causes of depression among students?
 ```sql
@@ -55,9 +58,11 @@ select AVG(apd) apd, AVG(AHome) AHome, AVG(APH)APH, AVG(ACS)ACS, AVG(AGuilt)AGui
 AVG(AMiscell)AMiscell, AVG(ToAS)ToAS
 from Mental_health
 where Dep = 'yes' and Dep_type = 'major'
--- Academic stress, Miscellenous reasons, Academic Performance
 ```
 ![](https://github.com/XeNoX36/Students-Mental-Health/blob/main/MH3.png)
+```sql
+-- Academic stress, Miscellenous reasons, Academic Performance
+```
 
 ## 4. How does support from friends, parents, professionals relate to depression severity? 
 ```sql
@@ -76,9 +81,11 @@ from Mental_health
 where Professional_bi = 'yes'
 group by DepSev
 -- Most supports came from Parents then Friends
--- Students with Severe depression required support from partents and professionals
 ```
 ![](https://github.com/XeNoX36/Students-Mental-Health/blob/main/MH5.png)
+```sql
+-- Students with Severe depression required support from partents and professionals
+```
 
 ## 5. Is there a gender difference in these support-seeking behaviors?
 ```sql
@@ -96,9 +103,11 @@ select Gender, count(Professional_bi) Prof_Sup
 from Mental_health
 where Professional_bi = 'yes'
 group by Gender;
--- in all criterias Females Utilized support than Males
 ```
 ![](https://github.com/XeNoX36/Students-Mental-Health/blob/main/MH6.png)
+```sql
+-- in all criterias Females Utilized support than Males
+```
 ## 6. How does duration of stay affect mental health or social connections?
 ```sql
 with cte as(
@@ -123,9 +132,12 @@ from Mental_health
 where Intimate = 'yes'
 group by ToDep
 order by ToDep desc
--- Reduced depression symptoms was seen in most students who were religious and had intimate partner
 ```
 ![](https://github.com/XeNoX36/Students-Mental-Health/blob/main/MH%207.png)
+```sql
+-- Reduced depression symptoms was seen in most students who were religious and had intimate partner
+```
+
 ## 8. What coping strategies are most commonly associated with lower depression severity?
 ```sql
 select DepSev, count(Partner_bi) partners-- Professional_bi, religion_bi, Alone_bi, Internet_bi, Others_bi
@@ -163,7 +175,8 @@ from Mental_health)
 select *
 from cte
 where RN <= 5 
--- No, Higher academic stress is not associated to higher depression 
 ```
 ![](https://github.com/XeNoX36/Students-Mental-Health/blob/main/Mental%20Health%209.png)
-
+```sql
+-- No, Higher academic stress is not associated to higher depression 
+```
