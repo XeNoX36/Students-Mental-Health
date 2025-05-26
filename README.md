@@ -30,6 +30,7 @@ from Mental_health
 where Dep = 'yes'
 group by inter_dom
 ```
+![]()
 ## 2. Does language proficiency (Japanese/English) influence mental health outcomes?
 ```sql
 select Japanese_cate, COUNT(Dep) Depression
@@ -45,6 +46,7 @@ and Dep = 'yes'
 group by English_cate
 -- student with high Eglish proficiency show a great depression tendencies
 ```
+![]()
 ## 3. What are the most common causes of depression among students?
 ```sql
 select AVG(apd) apd, AVG(AHome) AHome, AVG(APH)APH, AVG(ACS)ACS, AVG(AGuilt)AGuilt, 
@@ -53,6 +55,7 @@ from Mental_health
 where Dep = 'yes' and Dep_type = 'major'
 -- Academic stress, Miscellenous reasons, Academic Performance
 ```
+![]()
 ## 4. How does support from friends, parents, professionals relate to depression severity? 
 ```sql
 select DepSev, count(Friends_bi) Friend_Sup
@@ -72,6 +75,7 @@ group by DepSev
 -- Most supports came from Parents then Friends
 -- Students with Severe depression required support from partents and professionals
 ```
+![]()
 ## 5. Is there a gender difference in these support-seeking behaviors?
 ```sql
 select Gender, count(Friends_bi) Friend_Sup
@@ -90,6 +94,7 @@ where Professional_bi = 'yes'
 group by Gender;
 -- in all criterias Females Utilized support than Males
 ```
+![]()
 ## 6. How does duration of stay affect mental health or social connections?
 ```sql
 with cte as(
@@ -116,6 +121,7 @@ group by ToDep
 order by ToDep desc
 -- Reduced depression symptoms was seen in most students who were religious and had intimate partner
 ```
+![]()
 ## 8. What coping strategies are most commonly associated with lower depression severity?
 ```sql
 select DepSev, count(Partner_bi) partners-- Professional_bi, religion_bi, Alone_bi, Internet_bi, Others_bi
@@ -155,4 +161,5 @@ from cte
 where RN <= 5 
 -- No, Higher academic stress is not associated to higher depression 
 ```
+![]()
 
